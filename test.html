@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPlan - Solusi Pengadaan Acara Anda</title>
+    <style>
+        /* Dasar-dasar Styling */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f7f6; color: #333; }
+        
+        /* Navigasi */
+        nav { background: #fff; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #ff4757; }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 500; }
+
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1350&q=80'); background-size: cover; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; padding: 20px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .search-container { background: white; padding: 10px; border-radius: 50px; display: flex; width: 80%; max-width: 600px; }
+        .search-container input { border: none; padding: 10px 20px; flex: 1; border-radius: 50px; outline: none; }
+        .search-container button { background: #ff4757; color: white; border: none; padding: 10px 25px; border-radius: 50px; cursor: pointer; }
+
+        /* Kategori */
+        .categories { padding: 40px 5%; display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .cat-card { text-align: center; cursor: pointer; transition: transform 0.3s; margin: 10px; }
+        .cat-card:hover { transform: translateY(-5px); }
+        .cat-icon { width: 60px; height: 60px; background: #ff4757; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; font-size: 1.2rem; }
+
+        /* Vendor Grid */
+        .container { padding: 20px 5%; }
+        .section-title { margin-bottom: 20px; font-size: 1.8rem; }
+        .vendor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        .vendor-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: 0.3s; }
+        .vendor-card:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .vendor-img { width: 100%; height: 180px; background: #ddd; object-fit: cover; }
+        .vendor-info { padding: 15px; }
+        .vendor-info h3 { margin-bottom: 5px; font-size: 1.2rem; }
+        .vendor-info p { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+        .price { font-weight: bold; color: #ff4757; font-size: 1.1rem; }
+        .btn-view { display: block; width: 100%; text-align: center; background: #f1f2f6; color: #333; padding: 10px; text-decoration: none; border-radius: 5px; margin-top: 10px; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Hajatin</div>
+        <ul class="nav-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Vendor</a></li>
+            <li><a href="#">Paket Hemat</a></li>
+            <li><a href="#">Kontak</a></li>
+            <li><a href="#" style="color: #ff4757;">Masuk/Daftar</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>Wujudkan Acara Impian Anda</h1>
+        <p>Temukan Venue, MC, MUA, dan Catering terbaik dalam satu platform</p>
+        <div class="search-container">
+            <input type="text" placeholder="Cari MUA, Gedung, atau Catering...">
+            <button>Cari Sekarang</button>
+        </div>
+    </header>
+
+    <div class="categories">
+        <div class="cat-card">
+            <div class="cat-icon">V</div>
+            <p>Venue</p>
+        </div>
+        <div class="cat-card">
+            <div class="cat-icon">M</div>
+            <p>MC</p>
+        </div>
+        <div class="cat-card">
+            <div class="cat-icon">U</div>
+            <p>MUA</p>
+        </div>
+        <div class="cat-card">
+            <div class="cat-icon">C</div>
+            <p>Catering</p>
+        </div>
+        <div class="cat-card">
+            <div class="cat-icon">P</div>
+            <p>Photo</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Rekomendasi Vendor</h2>
+        <div class="vendor-grid">
+            
+            <div class="vendor-card">
+                <div class="vendor-img" style="background: url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=500&q=60') center/cover;"></div>
+                <div class="vendor-info">
+                    <p><small>VENUE</small></p>
+                    <h3>Grand Ballroom Senayan</h3>
+                    <p>Jakarta Pusat</p>
+                    <div class="price">Rp 25.000.000</div>
+                    <a href="#" class="btn-view">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="vendor-card">
+                <div class="vendor-img" style="background: url('https://images.unsplash.com/photo-1484863137850-59afccd07598?auto=format&fit=crop&w=500&q=60') center/cover;"></div>
+                <div class="vendor-info">
+                    <p><small>MUA</small></p>
+                    <h3>Glow Up by Sarah</h3>
+                    <p>Bandung</p>
+                    <div class="price">Rp 2.500.000</div>
+                    <a href="#" class="btn-view">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="vendor-card">
+                <div class="vendor-img" style="background: url('https://images.unsplash.com/photo-1472653431158-6364773b2a56?auto=format&fit=crop&w=500&q=60') center/cover;"></div>
+                <div class="vendor-info">
+                    <p><small>MC / HOST</small></p>
+                    <h3>Bima Arya (MC Wedding)</h3>
+                    <p>Jakarta</p>
+                    <div class="price">Rp 1.500.000</div>
+                    <a href="#" class="btn-view">Lihat Detail</a>
+                </div>
+            </div>
+
+            <div class="vendor-card">
+                <div class="vendor-img" style="background: url('https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=500&q=60') center/cover;"></div>
+                <div class="vendor-info">
+                    <p><small>CATERING</small></p>
+                    <h3>Delicia Catering</h3>
+                    <p>Surabaya</p>
+                    <div class="price">Rp 75.000 / Pax</div>
+                    <a href="#" class="btn-view">Lihat Detail</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer style="background: #333; color: white; padding: 40px 5%; margin-top: 50px; text-align: center;">
+        <p>&copy; 2025 EventPlan Indonesia. Semua Hak Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
